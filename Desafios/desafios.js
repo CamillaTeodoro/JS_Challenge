@@ -72,9 +72,9 @@
 
 //! Leia um valor inteiro X. Em seguida apresente os 6 valores ímpares consecutivos a partir de X, um valor por linha, inclusive o X se for o caso.
 
-function myFunction() {}
+// function myFunction() {}
 
-console.log(myFunction());
+// console.log(myFunction());
 
 //! Recebe dois numeros, se a for menor que b divide a por b e se a for maior que b multiplica a com b.
 
@@ -95,12 +95,23 @@ console.log(myFunction());
 
 //! Write a function that takes an array (a) and a value (b) as argument. The function should clean a from all occurrences of b. Return the filtered array
 
-function myFunction(a, b) {
-  let myArray = a.filter((value) => value !== b);
+// function myFunction(a, b) {
+//   let myArray = a.filter((value) => value !== b);
 
-  return myArray;
-}
+//   return myArray;
+// }
 
-console.log(myFunction([1, 2, 3], 2));
-console.log(myFunction([false, "2", 1], false));
-console.log(myFunction([1, 2, "2", 1], 1));
+// console.log(myFunction([1, 2, 3], 2));
+// console.log(myFunction([false, "2", 1], false));
+// console.log(myFunction([1, 2, "2", 1], 1));
+
+//! Write a function that takes an array of numbers as argument. It should return an array with the numbers sorted in descending order
+
+// function myFunction(arr) {
+//   return arr.sort().reverse();
+// }
+
+// console.log(myFunction([1, 3, 2]));
+// console.log(myFunction([4, 2, 3, 1]));
+
+
