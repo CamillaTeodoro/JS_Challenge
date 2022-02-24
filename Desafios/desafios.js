@@ -72,9 +72,18 @@
 
 //! Leia um valor inteiro X. Em seguida apresente os 6 valores ímpares consecutivos a partir de X, um valor por linha, inclusive o X se for o caso.
 
-// function myFunction() {}
+let x = 111;
 
-// console.log(myFunction());
+if (x % 2 === 0) {
+  x += 1;
+} else {
+  x;
+}
+
+for (let i = 0; i < 6; i++) {
+  console.log(x);
+  x += 2;
+}
 
 //! Recebe dois numeros, se a for menor que b divide a por b e se a for maior que b multiplica a com b.
 
@@ -113,5 +122,3 @@
 
 // console.log(myFunction([1, 3, 2]));
 // console.log(myFunction([4, 2, 3, 1]));
-
-
