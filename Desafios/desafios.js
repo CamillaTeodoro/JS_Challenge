@@ -184,26 +184,47 @@
 // console.log(myFunction({ one: 1, "prop-2": 2 }));
 // console.log(myFunction({ "prop-2": "two", prop: "test" }));
 
-
 //! Write a function that takes two date instances as arguments. It should return true if the dates are equal or false otherwise.
 
-function myFunction(a, b) {
+// function myFunction(a, b) {
 
-    return a.getTime() === b.getTime()
+//     return a.getTime() === b.getTime()
 
-    // const dateOne = Date.parse(a);
-    // const dateTwo = Date.parse(b);
+//     // const dateOne = Date.parse(a);
+//     // const dateTwo = Date.parse(b);
 
-    // if (dateOne === dateTwo) {
-    //     return true
-    // } else {
-    // return false;
-    // }
-  }
-  
-  console.log(myFunction(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')));
-  console.log(myFunction(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:00:00')));
-  console.log(myFunction(new Date('2001/01/01 08:00:00'), new Date('2000/01/01 08:00:00')));
+//     // if (dateOne === dateTwo) {
+//     //     return true
+//     // } else {
+//     // return false;
+//     // }
+//   }
 
+//   console.log(myFunction(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')));
+//   console.log(myFunction(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:00:00')));
+//   console.log(myFunction(new Date('2001/01/01 08:00:00'), new Date('2000/01/01 08:00:00')));
 
-  
+//! Write a function that takes two strings (a and b) as arguments. Return the number of times a occurs in b
+
+// function myFunction(a, b) {
+
+//   let xLength = b.match(/a/gi).length;
+
+//   return xLength;
+// }
+
+// console.log(myFunction('m', 'how many times does the character occur in this sentence?'));
+// console.log(myFunction('h', 'how many times does the character occur in this sentence?'));
+// console.log(myFunction('?', 'how many times does the character occur in this sentence?'));
+// console.log(myFunction('e', 'how many times does the character occur in this sentence?'));
+
+//! Write a function that takes an object (a) as argument. Return the sum of all object values
+
+function myFunction(a) {
+  const arr = Object.values(a);
+  console.log(arr);
+  return Object.values(a).reduce((sum, cur) => sum + cur, 0); 
+}
+console.log(myFunction({ a: 1, b: 2, c: 3 }));
+console.log(myFunction({ j: 9, i: 2, x: 3, z: 4 }));
+console.log(myFunction({ w: 15, x: 22, y: 13 }));
