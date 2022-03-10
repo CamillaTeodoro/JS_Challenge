@@ -132,9 +132,7 @@
 // }
 
 // console.log(myFunction(new Date(Date.UTC(2000, 0o1, 0o1)), 31));
-
 // console.log(myFunction(new Date(Date.UTC(2000, 0o1, 0o1)), 10));
-
 // console.log(myFunction(new Date(Date.UTC(2000, 0o2, 28)), 2));
 
 //! Write a function that takes an object as argument. It should return an object with all original object properties except for the property with key 'b'
@@ -208,23 +206,116 @@
 
 // function myFunction(a, b) {
 
-//   let xLength = b.match(/a/gi).length;
+//     console.log(b.split(a));
 
-//   return xLength;
+//   return b.split(a).length-1;
 // }
 
-// console.log(myFunction('m', 'how many times does the character occur in this sentence?'));
-// console.log(myFunction('h', 'how many times does the character occur in this sentence?'));
-// console.log(myFunction('?', 'how many times does the character occur in this sentence?'));
-// console.log(myFunction('e', 'how many times does the character occur in this sentence?'));
+// console.log(
+//   myFunction("m", "how many times does the character occur in this sentence?")
+// );
+// console.log(
+//   myFunction("h", "how many times does the character occur in this sentence?")
+// );
+// console.log(
+//   myFunction("?", "how many times does the character occur in this sentence?")
+// );
+// console.log(
+//   myFunction("z", "how many times does the character occur in this sentence?")
+// );
 
 //! Write a function that takes an object (a) as argument. Return the sum of all object values
 
-function myFunction(a) {
-  const arr = Object.values(a);
-  console.log(arr);
-  return Object.values(a).reduce((sum, cur) => sum + cur, 0); 
+// function myFunction(a) {
+//   const arr = Object.values(a);
+//   console.log(arr);
+//   return Object.values(a).reduce((sum, cur) => sum + cur, 0);
+// }
+// console.log(myFunction({ a: 1, b: 2, c: 3 }));
+// console.log(myFunction({ j: 9, i: 2, x: 3, z: 4 }));
+// console.log(myFunction({ w: 15, x: 22, y: 13 }));
+
+//! Write a function that takes two sets (a and b) as arguments. Get the intersection of the sets
+
+// function myFunction(a, b) {
+
+//   let _intersection = new Set();
+//   for (let elem of b) {
+//     if (a.has(elem)) {
+//       _intersection.add(elem);
+//     }
+//   }
+//   return _intersection;
+// }
+
+// console.log(myFunction(new Set([1, 2, 3]), new Set([4, 5, 6])));
+// console.log(myFunction(new Set("12345"), new Set([..."45678"])));
+// console.log(myFunction(new Set([1, 2, 3]), new Set([2, 3, 4])));
+
+//! Write a function that takes two sets (a and b) as arguments. Return the symmetric difference of the sets.
+
+// function myFunction(setA, setB) {
+//   let _difference = new Set(setA);
+//   for (let elem of setB) {
+//     if (_difference.has(elem)) {
+//       _difference.delete(elem);
+//     } else {
+//       _difference.add(elem);
+//     }
+//   }
+//   return _difference;
+// }
+
+// console.log(myFunction(new Set([1, 2, 3]), new Set([4, 5, 6])));
+// console.log(myFunction(new Set("12345"), new Set([..."45678"])));
+// console.log(myFunction(new Set([1, 2, 3]), new Set([2, 3, 4])));
+
+//! Write a function that takes an array of strings as argument. Return the longest string
+
+// function myFunction(arr) {
+//   let myStr = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].length > myStr.length) {
+//       myStr = arr[i];
+//     }
+//   }
+//   return myStr;
+// }
+
+// console.log(myFunction(["help", "me", "testing"]));
+// console.log(myFunction(["I", "need", "candy"]));
+// console.log(myFunction(["betters", "life", "dont", "ornitorrinco"]));
+
+//! Write a function that takes an array of numbers as argument. It should return the average of the numbers
+
+// function myFunction(arr) {
+//   const mySize = arr.length;
+
+//   return arr.reduce((sum, cur) => sum + cur, 0) / mySize;
+// }
+
+// console.log(myFunction([10, 100, 40]));
+// console.log(myFunction([10, 100, 1000]));
+// console.log(myFunction([-50, 0, 50, 200]));
+// console.log(myFunction([10.2, 155, 40.8]));
+
+//! Write a function that takes a number (a) as argument. Round a to the 2nd digit after the comma. Return the rounded number
+
+// function myFunction(a) {
+//   const decimal = a.toFixed(2);
+
+//   return parseFloat(decimal);
+// }
+
+// console.log(myFunction(2.12397));
+// console.log(myFunction(3.136));
+// console.log(myFunction(1.12397));
+// console.log(myFunction(26.1379));
+
+
+//! Write a function that takes arguments an arbitrary number of arrays. It should return an array containing the values of all arrays
+
+function myFunction(...arrays){
+
+return 
 }
-console.log(myFunction({ a: 1, b: 2, c: 3 }));
-console.log(myFunction({ j: 9, i: 2, x: 3, z: 4 }));
-console.log(myFunction({ w: 15, x: 22, y: 13 }));
