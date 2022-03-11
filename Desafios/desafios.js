@@ -312,10 +312,47 @@
 // console.log(myFunction(1.12397));
 // console.log(myFunction(26.1379));
 
-
 //! Write a function that takes arguments an arbitrary number of arrays. It should return an array containing the values of all arrays
 
-function myFunction(...arrays){
+// function myFunction(...arrays) {
+//   return arrays.flat();
+// }
 
-return 
+// console.log(myFunction([1, 2, 3], [4, 5, 6]));
+// console.log(myFunction(["a", "b", "c"], [4, 5, 6]));
+// console.log(myFunction([true, true], [1, 2], ["a", "b"]));
+
+//! Write a function that takes an array as argument. It should return true if all elements in the array are equal
+//! It should return false otherwise
+
+// function myFunction(arr) {
+//   const result = arr.every((element) => {
+//     return arr[0] === element;
+//   });
+
+//   return result;
+// }
+
+// console.log(myFunction([true, true, true, true]));
+// console.log(myFunction(["test", "test", "test"]));
+// console.log(myFunction([1, 1, 1, 2]));
+// console.log(myFunction(["10", 10, 10, 10]));
+
+function myFunction2(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === arr[0]) {
+      continue;
+    } else {
+      return false;
+    }
+  }
+  return true;
 }
+
+console.log(myFunction2([true, true, true, true]));
+console.log(myFunction2(["test", "test", "test"]));
+console.log(myFunction2([1, 1, 1, 2]));
+console.log(myFunction2(["10", 10, 10, 10]));
+
+
+
