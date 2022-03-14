@@ -338,21 +338,112 @@
 // console.log(myFunction([1, 1, 1, 2]));
 // console.log(myFunction(["10", 10, 10, 10]));
 
-function myFunction2(arr) {
+// function myFunction2(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === arr[0]) {
+//       continue;
+//     } else {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(myFunction2([true, true, true, true]));
+// console.log(myFunction2(["test", "test", "test"]));
+// console.log(myFunction2([1, 1, 1, 2]));
+// console.log(myFunction2(["10", 10, 10, 10]));
+
+//! Write a function that takes a number (a) as argument.  If a is a whole number (has no decimal place), return true. Otherwise, return false.
+
+// function myFunction(a) {
+
+// return a % 1 === 0;
+
+//   return Number.isInteger(a); // outra forma
+// }
+
+// console.log(myFunction(4));
+// console.log(myFunction(1.123));
+// console.log(myFunction(1048));
+// console.log(myFunction(10.48));
+
+//! Write a function that takes an array of objects and a string as arguments. Add a property with key 'continent' and value equal to the string to each of the objects. Return the new array of objects
+
+// function myFunction(arr, str) {
+//   const myArray = arr.map((element) => ({
+//     ...element,
+//     continent: str,
+//   }));
+
+//   return myArray;
+// }
+
+// console.log(
+//   myFunction(
+//     [
+//       { city: "Tokyo", country: "Japan" },
+//       { city: "Bangkok", country: "Thailand" },
+//     ],
+//     "Asia"
+//   )
+// );
+// console.log(
+//   myFunction(
+//     [
+//       { city: "Stockholm", country: "Sweden" },
+//       { city: "Paris", country: "France" },
+//     ],
+//     "Europe"
+//   )
+// );
+
+//! Write a function that takes an array (a) and a number (b) as arguments. Sum up all array elements with a value greater than b. Return the sum
+
+// function myFunction(a, b) {
+//   let sum = 0;
+
+//   for (let i = 0; i < a.length; i++) {
+//     if (a[i] > b) {
+//       sum = sum + a[i];
+//     }
+//   }
+
+//   return sum;
+// }
+
+// console.log(myFunction([1, 2, 3, 4, 5, 6, 7], 2));
+// console.log(myFunction([-10, -11, -3, 1, -4], -3));
+// console.log(myFunction([78, 99, 100, 101, 401], 99));
+
+//! Write a function that takes two arrays as arguments. Merge both arrays and remove duplicate values. Sort the merge result in ascending order. Return the resulting array.
+
+// function myFunction(a, b) {
+//   const conc = a.concat(b).sort(function (x, y) {
+//     return x - y;
+//   });
+//   const mySet = new Set(conc);
+
+//   return [...mySet];
+// }
+
+// console.log(myFunction([1, 2, 3], [3, 4, 5]));
+// console.log(myFunction([-10, 22, 333, 42], [-11, 5, 22, 41, 42]));
+
+//! Write a function that takes a Set and an array as arguments. If not already existing, add each element in the array to the Set. Return the modified Set.
+
+function myFunction(set, arr) {
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === arr[0]) {
+    if (set.has(arr[i])) {
       continue;
     } else {
-      return false;
+      set.add(arr[i]);
     }
   }
-  return true;
+
+  return set;
 }
 
-console.log(myFunction2([true, true, true, true]));
-console.log(myFunction2(["test", "test", "test"]));
-console.log(myFunction2([1, 1, 1, 2]));
-console.log(myFunction2(["10", 10, 10, 10]));
-
-
-
+console.log(myFunction(new Set([1, 2, 3]), [4, 5, 6]));
+console.log(myFunction(new Set("12345"), [..."6789"]));
+console.log(myFunction(new Set([1, 2, 3]), [2, 3]));
